@@ -27,14 +27,25 @@ public class LineComparisionOOPS {
         int length1= (int) Math.sqrt(Math.pow(x2-x1,  2) + Math.pow(y2-y1, 2));
         int length2= (int) Math.sqrt(Math.pow(x4-x3,  2) + Math.pow(y4-y3, 2));
         System.out.println("Length of a line1 is: " + length1);
-        System.out.println("Length of a line is: " + length2);
+        System.out.println("Length of a line2 is: " + length2);
         Integer lineLength1 = length1;
         Integer lineLength2 = length2;
+        int result =lineLength1.compareTo(lineLength2);
         if(lineLength1.equals(lineLength2)) {
             System.out.println("Lines are equal");
         }
         else {
             System.out.println("Lines are not equal");
+        }
+
+        if(result > 0) {
+            System.out.println("Line1 is greater than line2");
+        }
+        else if(result < 0) {
+            System.out.println("Line1 is less than line2");
+        }
+        else {
+            System.out.println("Line1 is equal to line2");
         }
     }
 }
